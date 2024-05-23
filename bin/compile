@@ -35,7 +35,7 @@ echo "Restoring shared build cache from app [$SHARED_BUILD_CACHE_APP_NAME]..."
 
 start=`date +%s`
 
-curl -s $cache_get_url | tar -C $CACHE_DIR -zxf vendor node node_modules -
+curl -s $cache_get_url | tar -C $CACHE_DIR -zxf -
 
 end=`date +%s`
 echo "(took $((end-start))s)"
